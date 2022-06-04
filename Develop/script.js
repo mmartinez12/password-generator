@@ -42,6 +42,17 @@ function writePassword() {
        window.alert("You have NOT selected UPPERCASE letters.")
     }
 
+  // numbers selection
+  var numbersConfirm = window.confirm("Would you like to include numbers? If YES, select Okay. If NO, select Cancel.");
+
+    if (numbersConfirm) {
+      window.alert("You have selected NUMBERS.");
+      rawpassword += characters.number;  
+    }
+    else {
+      window.alert("You have NOT selected NUMBERS.")
+    }
+
 passwordText.value = password;
 }
 
