@@ -64,6 +64,12 @@ function writePassword() {
        window.alert("You have NOT selected SPECIAL CHARACTERS.")
     }
 
+    // if user does not make any selections, ask for selections again
+    if (!lowercaseConfirm && !uppercaseConfirm && !numbersConfirm && !specialConfirm) {
+      window.alert("You must make at least one character type selection. Please try again!");
+      return writePassword();
+    }
+
 passwordText.value = password;
 }
 
