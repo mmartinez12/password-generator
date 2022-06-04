@@ -52,6 +52,17 @@ function writePassword() {
     else {
       window.alert("You have NOT selected NUMBERS.")
     }
+    
+  // special characters selection
+  var specialConfirm = window.confirm("Would you like to include special characters? If YES, select Okay. If NO, select Cancel.");
+
+    if (specialConfirm) {
+       window.alert("You have selected SPECIAL CHARACTERS.")
+      rawpassword += characters.special;
+    }
+    else {
+       window.alert("You have NOT selected SPECIAL CHARACTERS.")
+    }
 
 passwordText.value = password;
 }
