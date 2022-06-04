@@ -35,51 +35,12 @@ function writePassword() {
   var uppercaseConfirm = window.confirm("Would you like to include UPPERCASE letters? If YES, select Okay. If NO, select Cancel.");
 
     if (uppercaseConfirm) {
-     window.alert("You have selected UPPERCASE letters.");
-    rawpassword += characters.upper;
-  }
+      window.alert("You have selected UPPERCASE letters.");
+      rawpassword += characters.upper;
+    }
     else {
-     window.alert("You have NOT selected UPPERCASE letters.")
-  }
-
-  // numbers selection
-  var numbersConfirm = window.confirm("Would you like to include numbers? If YES, select Okay. If NO, select Cancel.");
-
-    if (numbersConfirm) {
-      window.alert("You have selected NUMBERS.");
-      rawpassword += characters.number;  
-  }
-    else {
-     window.alert("You have NOT selected NUMBERS.")
-  }
-
-  // special characters selection
-  var specialConfirm = window.confirm("Would you like to include special characters? If YES, select Okay. If NO, select Cancel.");
-
-    if (specialConfirm) {
-      window.alert("You have selected SPECIAL CHARACTERS.")
-      rawpassword += characters.special;
-  }
-    else {
-        window.alert("You have NOT selected SPECIAL CHARACTERS.")
-  }
-
-  // if user does not make any selections, ask for selections again
-  if (!lowercaseConfirm && !uppercaseConfirm && !numbersConfirm && !specialConfirm) {
-    window.alert("You must make at least one character type selection. Please try again!");
-    return writePassword();
-}
-
-  // randomize password characters
-  var password = "";
-    for (let i = 0; i < passLength; i++) {
-     password += rawpassword[Math.floor(Math.random() * rawpassword.length)]
-}
-
-//         _
-//     .__(.)< (MEOW)
-//     \___)   
-// ~~~~~~~~~~~~~~~~
+       window.alert("You have NOT selected UPPERCASE letters.")
+    }
 
 passwordText.value = password;
 }
