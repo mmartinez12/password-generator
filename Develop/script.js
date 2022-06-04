@@ -76,6 +76,12 @@ function writePassword() {
       password += rawpassword[Math.floor(Math.random() * rawpassword.length)]
     }
 
+
+//         _
+//     .__(.)< (MEOW)
+//     \___)   
+// ~~~~~~~~~~~~~~~~
+
 passwordText.value = password;
 }
 
