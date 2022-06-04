@@ -70,6 +70,12 @@ function writePassword() {
       return writePassword();
     }
 
+    // randomize password characters
+    var password = "";
+      for (let i = 0; i < passLength; i++) {
+      password += rawpassword[Math.floor(Math.random() * rawpassword.length)]
+    }
+
 passwordText.value = password;
 }
 
